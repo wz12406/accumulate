@@ -13,8 +13,6 @@
  *  % java PictureDump 16 6 < abra.txt
  *
  *************************************************************************/
-import java.awt.*;
-
 public class PictureDump {
 
     public static void main(String[] args) {

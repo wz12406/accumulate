@@ -8,8 +8,6 @@
  *
  *************************************************************************/
 
-import java.awt.*;
-
 public class CollisionSystem {
     private MinPQ<Event> pq;        // the priority queue
     private double t  = 0.0;        // simulation clock time

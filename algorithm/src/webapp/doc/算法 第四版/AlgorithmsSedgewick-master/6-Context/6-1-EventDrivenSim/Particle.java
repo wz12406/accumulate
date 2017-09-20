@@ -6,8 +6,6 @@
  *
  *************************************************************************/
 
-import java.awt.*;
-
 public class Particle {
     private static final double INFINITY = Double.POSITIVE_INFINITY;
 

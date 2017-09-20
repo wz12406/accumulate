@@ -8,7 +8,6 @@
  *
  *************************************************************************/
 
-import java.io.*;
 import java.net.Socket;
 import java.net.URL;
 import java.net.URLConnection;
