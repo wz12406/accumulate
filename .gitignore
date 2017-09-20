@@ -1,11 +1,5 @@
-# Compiled class file
 *.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
+target
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -14,9 +8,22 @@
 *.jar
 *.war
 *.ear
-*.zip
-*.tar.gz
-*.rar
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# IDE Files #
+.idea
+*.eclipse
+*.myeclipse
+*.iml
+
+# minxin-base项目中的目录，排除在git之外
+src/main/java/com/minxin/base
+src/main/resources/cache
+src/main/resources/security
+src/main/resources/root-context-base.xml
+/.settings/
+/.classpath
+/.project
+/.tern-project
