@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<!-- Spring配置 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:/spring/applicationContext.xml</param-value>
+	</context-param>
+
+	<!--Spring ApplicationContext 载入 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- 系统初始化操作，不使用可删除 -->
+	<listener>
+		<listener-class>cn.yesway.listener.InitListener</listener-class>
+	</listener>
+	<!-- 监控session变化，不使用可删除 -->	
+	<listener> 
+		<listener-class>cn.yesway.listener.SessionListener</listener-class> 
+	</listener> 
+
+	<!-- Character Encoding filter -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- 禁止访问 properties文件，不使用可删除 -->
+	<filter>
+		<filter-name>accessDeniedFilter</filter-name>
+		<filter-class>cn.yesway.filter.AccessDeniedFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>accessDeniedFilter</filter-name>
+		<url-pattern>*.properties</url-pattern>
+	</filter-mapping>
+
+	<!-- Spring MVC Servlet -->
+	<servlet>
+		<servlet-name>spring-mvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath*:/spring/spring-mvc.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>spring-mvc</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<!-- welcome-file配置 -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- session配置 timeout=0,-1代表永不超时 -->
+	<session-config>
+		<session-timeout>0</session-timeout>
+	</session-config>
+</web-app>
