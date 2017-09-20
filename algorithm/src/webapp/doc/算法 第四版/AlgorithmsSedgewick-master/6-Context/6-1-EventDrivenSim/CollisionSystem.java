@@ -8,7 +8,7 @@
  *
  *************************************************************************/
 
-import java.awt.Color;
+import java.awt.*;
 
 public class CollisionSystem {
     private MinPQ<Event> pq;        // the priority queue

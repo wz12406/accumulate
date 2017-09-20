@@ -4,29 +4,20 @@
  *************************************************************************/
 
 // Imports from java.
-import java.io.*;
-import java.net.*;
-import java.awt.*;
-import java.util.*;
-import javax.swing.*;
-import javax.swing.event.*;
-import java.text.*;
-import java.awt.geom.*;
-import java.awt.event.*;
-import java.awt.image.*;
+import com.sun.j3d.loaders.Loader;
+import com.sun.j3d.loaders.lw3d.Lw3dLoader;
+import com.sun.j3d.loaders.objectfile.ObjectFile;
+import com.sun.j3d.utils.behaviors.vp.OrbitBehavior;
+import com.sun.j3d.utils.geometry.*;
+import com.sun.j3d.utils.image.*;
+import com.sun.j3d.utils.scenegraph.io.*;
+import com.sun.j3d.utils.universe.*;
+
 import javax.imageio.ImageIO;
+import javax.media.j3d.*;
+import javax.vecmath.*;
 
 // Imports from j3d.
-import javax.vecmath.*;
-import javax.media.j3d.*;
-import com.sun.j3d.utils.image.*;
-import com.sun.j3d.utils.geometry.*;
-import com.sun.j3d.utils.universe.*;
-import com.sun.j3d.utils.behaviors.vp.OrbitBehavior;
-import com.sun.j3d.utils.scenegraph.io.*;
-import com.sun.j3d.loaders.objectfile.ObjectFile;
-import com.sun.j3d.loaders.lw3d.Lw3dLoader;
-import com.sun.j3d.loaders.Loader;
 
 /**
  *  Info for javadoc intro here.
