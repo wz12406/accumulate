@@ -1,4 +1,4 @@
-package cn.wz.algorithm.search; /*************************************************************************
+package cn.wz.algorithm.my.search; /*************************************************************************
  *  Compilation:  javac BinarySearch.java
  *  Execution:    java BinarySearch whitelist.txt < input.txt
  *  Data files:   http://algs4.cs.princeton.edu/11model/tinyW.txt
