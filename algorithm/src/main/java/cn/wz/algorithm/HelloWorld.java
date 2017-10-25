@@ -7,7 +7,8 @@ package cn.wz.algorithm;
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("主分支提交3");
-        System.out.println("主分支提交4");
+        for(int i=12;i<11;i++){
+            System.out.println("-----------");
+        }
     }
 }

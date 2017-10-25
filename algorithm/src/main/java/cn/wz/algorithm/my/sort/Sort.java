@@ -54,7 +54,7 @@ public class Sort {
      * @return
      */
     public static Comparable[] input(){
-        Scanner scanner = new Scanner(Insert.class.getClassLoader().getResourceAsStream("tinysort.txt"));
+        Scanner scanner = new Scanner(Sort.class.getClassLoader().getResourceAsStream("tinysort.txt"));
         int count = 0;
         List<Integer> arrlist = new ArrayList<>();
         while (scanner.hasNextInt()){
