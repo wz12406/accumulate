@@ -33,7 +33,6 @@ public class Sort {
         Comparable temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
-        System.out.println("交换"+a+"与"+b);
     }
 
 
