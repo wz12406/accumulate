@@ -37,6 +37,7 @@ public class MyHeapSort  extends Sort{
     public void sink(int k){
         while(2*k<=N){
             int j = 2*k;
+            //注：这里去要交换子节点中较小的那个交换元素；
             if(j<N&&less(heap,j+1,j)){
                 j=j+1;
             }

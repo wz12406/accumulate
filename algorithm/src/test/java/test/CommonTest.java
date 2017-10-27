@@ -24,4 +24,13 @@ public class CommonTest {
         System.out.println(s1);  //world
         System.out.println(s2);  //hello
     }
+
+    @Test
+    public void test_003(){
+        String s1 = "Hello";
+        String s2 = s1;
+        s1="World";
+        System.out.println(s1);  //world
+        System.out.println(s2);  //hello
+    }
 }
