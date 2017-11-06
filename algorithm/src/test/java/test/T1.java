@@ -19,6 +19,7 @@ public class T1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入参数值：");
+        System.out.println("test");
         int i = scanner.nextInt();
         int num = 0;
         int j=1;
