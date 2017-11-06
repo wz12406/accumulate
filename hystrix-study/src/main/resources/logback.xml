@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>  
+<configuration>
+	<property name="app_name" value="springmvc" />
+	<property name="log_path" value="logs\\" />
+
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">  
+		<layout class="ch.qos.logback.classic.PatternLayout">  
+        	<pattern>%-20(%d{yyyy-MM-dd HH:mm:ss.SSS}) %-5level %logger{80} [%method:%line] - %msg%n</pattern>  
+      	</layout>  
+    </appender>
+    
+	<appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">   
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">  
+        	<fileNamePattern>${log_path}${app_name}.%d{yyyy-MM-dd}.log</fileNamePattern>  
+        </rollingPolicy>  
+		<layout class="ch.qos.logback.classic.PatternLayout">  
+        	<pattern>%-20(%d{yyyy-MM-dd HH:mm:ss.SSS}) %-5level %logger{80} [%method:%line] - %msg%n</pattern>  
+       	</layout>  
+	</appender>
+    
+    <logger name="cn.yesway" level="DEGUG" />
+    <root level="INFO">
+    	<appender-ref ref="stdout" />
+    	<appender-ref ref="file" /> 
+	</root>  
+</configuration>  
