@@ -1,0 +1,2 @@
+# SpringMvc项目常用配置项目
+学习使用rabbitmq的一些demo
